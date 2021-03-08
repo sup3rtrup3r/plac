@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.views.generic import DetailView, ListView
 
-# Create your views here.
+from .models import Povrce
+
+
+class VegetableListView(ListView):
+    model = Povrce
+
+
+class VegetableDetailViev(DetailView):
+    model = Povrce
+    context = ['name', 'description']

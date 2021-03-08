@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}Lista Povrca{% endblock title %}
+
+{% block content %}
+<h2>Lista Povrća</h2>
+<ul>
+	{% for povrce in povrce_list %}
+		<li><a href="#TODO">{{ povrce.name }}</a></li>
+	{% endfor %}
+</ul>
+{% endblock content %}

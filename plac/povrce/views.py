@@ -9,4 +9,3 @@ class VegetableListView(ListView):
 
 class VegetableDetailViev(DetailView):
     model = Povrce
-    context = ['name', 'description']

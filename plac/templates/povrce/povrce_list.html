@@ -6,7 +6,7 @@
 <h2>Lista Povrća</h2>
 <ul>
 	{% for povrce in povrce_list %}
-		<li><a href="#TODO">{{ povrce.name }}</a></li>
+		<li><a href="{% url 'povrce:detail' povrce.slug %}">{{ povrce.name }}</a></li>
 	{% endfor %}
 </ul>
 {% endblock content %}

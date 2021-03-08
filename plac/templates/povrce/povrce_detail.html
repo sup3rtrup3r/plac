@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Povrce: {{ povrce.name }}{% endblock title %}
+
+{% block content %}
+<h1>{{ povrce.name }}</h1>
+<h3>{{ povrce.description }}</h3>
+{% if povrce.vrsta %}
+	<p>Vrsta povrća: {{ povrce.get_vrsta_display }}</p>
+{% endif %}
+
+{% endblock content %}

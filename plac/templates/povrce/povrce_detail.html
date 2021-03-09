@@ -12,5 +12,13 @@
 	<p>Zemlja porijekla: {{ povrce.country_of_origin.name }}</p>
 	<img src="{{ povrce.country_of_origin.flag }}" alt="">
 {% endif %}
-
+<hr/>
+<h3>Submitted by
+	<a href="{% url 'users:detail' povrce.creator.username %}">
+		{{ povrce.creator.username }}
+	</a>
+</h3>
+	{% if povrce.creator.name %}
+		<p>{{ povrce.creator.name }}</p>
+	{% endif %}
 {% endblock content %}

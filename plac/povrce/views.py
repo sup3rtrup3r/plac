@@ -15,3 +15,7 @@ class VegetableDetailViev(DetailView):
 class VegetableCreateView(LoginRequiredMixin, CreateView):
     model = Povrce
     fields = ['name', 'description', 'vrsta', 'country_of_origin']
+
+    def form_valid(self, form):
+        form.instance.creator = self.request.user
+        return super().form_valid(form)

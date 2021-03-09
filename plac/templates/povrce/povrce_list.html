@@ -9,4 +9,12 @@
 		<li><a href="{% url 'povrce:detail' povrce.slug %}">{{ povrce.name }}</a></li>
 	{% endfor %}
 </ul>
+<hr/>
+<p>Ne vidite povrce izlistano ovdje?</p>
+<p>
+	<a class="btn btn-primary"
+			href="{% url 'povrce:create' %}" role="button">
+		Dodaj novo povrce
+	</a>
+</p>
 {% endblock content %}

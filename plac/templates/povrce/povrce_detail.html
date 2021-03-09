@@ -8,5 +8,9 @@
 {% if povrce.vrsta %}
 	<p>Vrsta povrća: {{ povrce.get_vrsta_display }}</p>
 {% endif %}
+{% if povrce.country_of_origin.name %}
+	<p>Zemlja porijekla: {{ povrce.country_of_origin.name }}</p>
+	<img src="{{ povrce.country_of_origin.flag }}" alt="">
+{% endif %}
 
 {% endblock content %}

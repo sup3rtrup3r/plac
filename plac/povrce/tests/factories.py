@@ -1,4 +1,5 @@
 from django.template.defaultfilters import slugify
+from plac.users.tests.factories import UserFactory
 
 import factory
 import factory.fuzzy
@@ -15,6 +16,7 @@ class VegetablesFactory(factory.django.DjangoModelFactory):
     vrsta = factory.fuzzy.FuzzyChoice(
         [x[0] for x in Povrce.Vrsta.choices]
     )
+    creator = factory.SubFactory(UserFactory)
 
     class Meta:
         model = Povrce
